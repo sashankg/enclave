@@ -37,3 +37,8 @@ class App extends React.Component {
 // hook into the `enclave` id, which is provided by enclave.
 render(<App />, document.getElementById('enclave'));
 ```
+
+Once you're ready to compile your code, run this awkward command in your terminal:
+```
+$ node node_modules/enclave/index.js
+```
