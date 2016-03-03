@@ -1,37 +1,22 @@
-var webpack = require('webpack');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-
+var HtmlWebpackPlugin = require('html-webpack-plugin')
 var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
-  template: __dirname + '/app/index.html',
-  hash: true,
+  template: './index.html',
   filename: 'index.html',
   inject: 'body'
-});
-var HotReloader = new webpack.HotModuleReplacementPlugin();
+})
 
 module.exports = {
-  devtool: 'source-map',
   entry: [
-    'webpack-dev-server/client?http://localhost:8080',
-    'webpack/hot/dev-server',
-    '../../app/App.js'
+    '../../app/app.js'
   ],
   output: {
-    path: 'dist',
-    filename: 'index_bundle.js',
+    path: '../../dist',
+    filename: "index_bundle.js"
   },
   module: {
     loaders: [
-      {
-        test: /\.js$/,
-        loader: 'react-hot!babel',
-        include: __dirname + '/app'
-      },
+      {test: /\.js$/, exclude: /node_modules/, loader: "babel-loader"}
     ]
   },
-  plugins: [HTMLWebpackPluginConfig, HotReloader],
-  devServer: {
-    contentBase: __dirname + '/dist',
-    hot: true,
-  }
-};
+  plugins: [HTMLWebpackPluginConfig]
+}
