@@ -1,6 +1,8 @@
 #Enclave
 An easier way to build modern JavaScript apps.
 
+> _Note: this is very much a proof of concept._
+
 ##Getting Started:
 ```
 $ mkdir my-new-app
