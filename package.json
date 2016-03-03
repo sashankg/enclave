@@ -4,7 +4,8 @@
   "description": "transpiler?",
   "main": "index.js",
   "scripts": {
-    "start": "webpack -w"
+    "prestart": "webpack",
+    "start": "webpack-dev-server"
   },
   "author": "Ean Platter <eanplatter@gmail.com> (eanplatter.github.io)",
   "license": "ISC",
