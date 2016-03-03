@@ -9,7 +9,6 @@
   },
   "author": "Ean Platter <eanplatter@gmail.com> (eanplatter.github.io)",
   "license": "ISC",
-  "preferGlobal": "true",
   "dependencies": {
     "babel-loader": "^5.3.2",
     "history": "^1.13.0",
