@@ -1,6 +1,6 @@
 {
   "name": "enclave",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "transpiler?",
   "main": "index.js",
   "scripts": {
