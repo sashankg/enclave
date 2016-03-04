@@ -9,15 +9,15 @@ $ mkdir my-new-app
 $ cd my-new-app
 $ npm init
 $ npm i enclave --save
-$ mkdir app
-$ touch app/App.js
 ```
 
-The file `app/App.js` acts as your entry point for webpack. Eventually this will be configurable.
-
-To hook something like React up, all you need to do is select the `enclave` id.
+Create an entry point for your application:
+```
+$ mkdir src && touch src/Main.js
+```
+Write some code, if you're doing React, something like this should work:
 ``` js
-/* app/App.js */
+/* src/Main.js */
 
 import React from 'react';
 import { render } from 'react-dom';
@@ -36,6 +36,20 @@ class App extends React.Component {
 
 // hook into the `enclave` id, which is provided by enclave.
 render(<App />, document.getElementById('enclave'));
+```
+
+You then want to create a `.enclaverc` file to tell enclave where to find your entrypoint.
+```
+$ touch .enclaverc
+```
+
+Specify your entrypoint:
+
+``` json
+/* .enclaverc */
+{
+  "entrypoint": "src/Main.js"
+}
 ```
 
 Once you're ready to compile your code, run this awkward command in your terminal:
