@@ -1,5 +1,10 @@
-#Enclave
-> _Note: this is very much a proof of concept._
+<p align="center">
+  <img alt="enclave" src="http://i1264.photobucket.com/albums/jj488/eanplatter1/enclave-logo_zpslmhskufg.png" width="546">
+</p>
+
+<p align="center">
+  An API for compiling React applications with Webpack and Babel.
+</p>
 
 ##Getting Started:
 ```
