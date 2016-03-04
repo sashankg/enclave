@@ -50,7 +50,8 @@ Configure your enclaverc file:
 {
   "entry": "src/App.js",
   "index": "src/index.html",
-  "output": "./dist"
+  "output": "./dist",
+  "port": "3000"
 }
 
 ```
