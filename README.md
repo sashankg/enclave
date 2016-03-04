@@ -63,3 +63,6 @@ Once you're ready to compile your code, run this awkward command in your termina
 ```
 $ node node_modules/enclave/index.js
 ```
+
+Then find your app at `http://localhost:3000`
+> If you don't specify a port in your .enclaverc file then your app will be served on port 8080.
