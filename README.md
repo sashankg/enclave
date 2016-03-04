@@ -38,18 +38,21 @@ class App extends React.Component {
 render(<App />, document.getElementById('enclave'));
 ```
 
-You then want to create a `.enclaverc` file to tell enclave where to find your entrypoint.
+You then want to create a `.enclaverc` file to inform enclave on some build settings.
 ```
 $ touch .enclaverc
 ```
 
-Specify your entrypoint:
+Configure your enclaverc file:
 
 ``` json
 /* .enclaverc */
 {
-  "entrypoint": "src/Main.js"
+  "entry": "src/App.js",
+  "index": "src/index.html",
+  "output": "./dist"
 }
+
 ```
 
 Once you're ready to compile your code, run this awkward command in your terminal:
