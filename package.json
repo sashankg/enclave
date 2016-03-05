@@ -1,6 +1,6 @@
 {
   "name": "enclave",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "description": "An API for compiling React applications with Webpack",
   "main": "index.js",
   "repository": {
