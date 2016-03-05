@@ -8,6 +8,7 @@
     "url": "https://github.com/eanplatter/enclave.git"
   },
   "scripts": {
+    "postinstall": "bash postinstall",
     "prestart": "webpack",
     "start": "webpack-dev-server"
   },
