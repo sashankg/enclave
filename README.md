@@ -44,8 +44,19 @@ render(<App />, document.getElementById('enclave'));
 ```
 
 Once you're ready to compile your code, run this awkward command in your terminal:
+
+Add an `enclave` script to your `package.json`. 
+```json
+{
+  "scripts": {
+    "enclave": "enclave"
+  }
+}
 ```
-$ node node_modules/enclave/index.js
+
+Once you're ready to compile your code, run the script:
+```
+$ npm run enclave
 ```
 
 Then find your app at `http://localhost:3000`
