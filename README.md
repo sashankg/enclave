@@ -14,6 +14,8 @@ $ npm init
 $ npm i enclave --save
 ```
 
+Enclave will then take you through a series of prompts. The answers to these prompts will create a `.enclaverc` file in your application's root. This file is what enclave uses to reference your build. If you need to change any of your settings, you can do that directly in the `.enclaverc` file.
+
 Create an entry point for your application:
 ```
 $ mkdir src && touch src/Main.js
@@ -39,24 +41,6 @@ class App extends React.Component {
 
 // hook into the `enclave` id, which is provided by enclave.
 render(<App />, document.getElementById('enclave'));
-```
-
-You then want to create a `.enclaverc` file to inform enclave on some build settings.
-```
-$ touch .enclaverc
-```
-
-Configure your enclaverc file:
-
-``` json
-/* .enclaverc */
-{
-  "entry": "src/App.js",
-  "index": "src/index.html",
-  "output": "./dist",
-  "port": "3000"
-}
-
 ```
 
 Once you're ready to compile your code, run this awkward command in your terminal:
