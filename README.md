@@ -46,9 +46,9 @@ You then want to create a `.enclaverc` file to inform enclave on some build sett
 $ touch .enclaverc
 ```
 
-Configure your enclaverc file:
+Configure your `.enclaverc` file:
 
-``` json
+```json
 /* .enclaverc */
 {
   "entry": "src/App.js",
@@ -59,9 +59,18 @@ Configure your enclaverc file:
 
 ```
 
-Once you're ready to compile your code, run this awkward command in your terminal:
+Add an `enclave` script to your `package.json`. 
+```json
+{
+  "scripts": {
+    "enclave": "enclave"
+  }
+}
 ```
-$ node node_modules/enclave/index.js
+
+Once you're ready to compile your code, run the script:
+```
+$ npm run enclave
 ```
 
 Then find your app at `http://localhost:3000`
