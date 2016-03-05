@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  An API for compiling React applications with Webpack and Babel.
+  A lightweight API for compiling React applications with Webpack and Babel.
 </p>
 
 ##Getting Started:
