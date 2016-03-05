@@ -5,7 +5,7 @@ Thank you for using...
    / _ \ '_ \ / __| |/ _` \ \ / / _ \
   |  __/ | | | (__| | (_| |\ V /  __/
    \___|_| |_|\___|_|\__,_| \_/ \___|
-                                     
+
 EOF
 echo -e "\x1b[35mWhere is the file you want enclave to use as your entry point? \x1b[0m"
 read answer
@@ -22,6 +22,9 @@ read answer
 echo -e "\x1b[32mWhere is your index.html file? \x1b[0m"
 read answer
     printf "  \"index\": \"$answer\"\n}" >> '../../.enclaverc'
+
+node add-script.js
+
 echo -e "\x1b[25mWoo you're done! \x1b[0m"
 echo -e "\x1b[35mIf you need to edit any of the answers you gave, head over to the .enclaverc file in your app! \x1b[0m"
 echo -e "\x1b[32mTo run your app type: \x1b[1m$ node node_modules/enclave/index.js\x1b[0m"
