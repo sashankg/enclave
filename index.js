@@ -17,7 +17,7 @@ var SETTING_DESTINATION = 'node_modules/enclave/settings.js'
  * An array of supported settings. Expand this when you support new .enclaverc settings.
  * @type {string[]}
  */
-var webpackSettings = ['entry', 'output', 'index']
+var webpackSettings = ['entry', 'output', 'index', 'port', 'live']
 
 /**
  * Create an array of values found in the .enclaverc file based on the webpackSettings.
@@ -40,4 +40,4 @@ var port = settings.harvest(['port'], SETTING_SOURCE) || 8080
 
 formattedSettings.to(SETTING_DESTINATION)
 shell.echo('Let the drive sequence begin, hit it Pinback.')
-shell.exec('cd node_modules/enclave && webpack && webpack-dev-server --port ' + port)
+shell.exec('cd node_modules/enclave && webpack && webpack-dev-server --port ' + JSON.parse(port))

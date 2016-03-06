@@ -15,7 +15,7 @@ function extractValue(keyword, setting) {
   setting = setting.replace(',', '')
   if (keyword === 'port') {
     if (setting) {
-      return JSON.parse(setting)
+      return setting
     }
     return 8080
   }
