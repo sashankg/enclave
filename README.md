@@ -46,6 +46,7 @@ render(<App />, document.getElementById('root'));
 
 Configure your `index.html` file to have something with the id your react app is looking to hook into ("root" in this case)
 ``` html
+<!-- src/index.html -->
 <html>
 <head>
   <title>my app</title>
@@ -66,3 +67,26 @@ If you want to edit your scripts, you can just move the start command somewhere 
 
 Then find your app at `http://localhost:3000`
 > If you don't specify a port in your .enclaverc file then your app will be served on port 8080.
+
+##Currently supported settings
+
+When enclave is installed in your project, it creates an `.enclaverc` file, this is where your settings are stored. Currently supported settings are:
+  - entry: {string} The relative path of your entry file, it tells Webpack where to start compiling. Ex. "src/App.js"
+  - output: {string} The relative path and name of the directory you want Webpack to spit your compiled code into. Ex. "dist"
+  - port: {number} The port where you want your app to run. Ex. 3000
+  - index: {string} The relative path of your `index.html` file. Ex. "src/index.html"
+  - live: {boolean} Whether you want live-reload or not. Takes in "Y" or "N"
+
+After your complete enclave's prompts, you'll find a `.enclave` file in your app. If you need to edit any of the answers you gave you can do that here. It should look something like this:
+
+```js
+/* .enclaverc */
+{ 
+  "entry": "src/App.js",
+  "output": "dist",
+  "port": "3000",
+  "index": "src/index.html",
+  "live": "true",
+}
+```
+
