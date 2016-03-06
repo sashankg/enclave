@@ -23,8 +23,6 @@ var entryArr = [
   return !!item && item
 })
 
-console.log('the entryarr is!', entryArr)
-
 var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
   template: '../../' + stringSafetyNet(settings.index, 'index.html'),
   filename: 'index.html',
