@@ -26,7 +26,7 @@ read answer
 node add-script.js
 
 while true; do
-    read -p "Do you want to enable live reload? y/n" yn
+    read -p "Do you want to enable live reload? y/n " yn
     case $yn in
         [Yy]* ) printf "  \"live\": \"true\",\n}" >> '../../.enclaverc'; break;;
         [Nn]* ) printf "  \"live\": \"false\",\n}" >> '../../.enclaverc'; exit;;
