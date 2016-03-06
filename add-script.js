@@ -4,7 +4,7 @@ var shell = require('shelljs')
  * back in with an enclave script
  * @type {string}
  */
-var newScript = "\"scripts\": { \n    \"enclave\": \"enclave\","
+var newScript = "\"scripts\": { \n    \"start\": \"node node_modules/enclave/index.js\","
 
 /**
  * This command goes ahead and adds it.
