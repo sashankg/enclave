@@ -18,7 +18,7 @@ Enclave will then take you through a series of prompts. The answers to these pro
 
 Create an entry point for your application:
 ```
-$ mkdir src && touch src/Main.js
+$ mkdir src && touch src/Main.js src/index.html
 ```
 Write some code, if you're doing React, something like this should work:
 ``` js
@@ -40,9 +40,21 @@ class App extends React.Component {
 }
 
 // hook into the `enclave` id, which is provided by enclave.
-render(<App />, document.getElementById('enclave'));
+render(<App />, document.getElementById('root'));
 ```
 > _don't forget to `$ npm install -S react react-dom` if you're going to use react :D_
+
+Configure your `index.html` file to have something with the id your react app is looking to hook into ("root" in this case)
+``` html
+<html>
+<head>
+  <title>my app</title>
+</head>
+<body>
+  <div id='root'></div>
+</body>
+</html>
+```
 
 Enclave will automagically add a script to your `package.json` file which will allow you to run everything. 
 To run it, type the following in your terminal:
