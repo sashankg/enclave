@@ -27,4 +27,4 @@ node add-script.js
 
 echo -e "\x1b[25mWoo you're done! \x1b[0m"
 echo -e "\x1b[35mIf you need to edit any of the answers you gave, head over to the .enclaverc file in your app! \x1b[0m"
-echo -e "\x1b[32mTo run your app type: \x1b[1m$ node node_modules/enclave/index.js\x1b[0m"
+echo -e "\x1b[32mTo run your app type: \x1b[1m$ npm start\x1b[0m"
