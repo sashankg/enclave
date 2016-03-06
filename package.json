@@ -13,7 +13,7 @@
     "start": "webpack-dev-server"
   },
   "bin": {
-    "enclave": "index.js"
+    "enclave": "bin/enclave"
   },
   "author": "Ean Platter <eanplatter@gmail.com> (eanplatter.github.io)",
   "license": "ISC",
