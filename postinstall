@@ -23,16 +23,16 @@ echo -e "\x1b[32mWhere is your index.html file? \x1b[0m"
 read answer
     printf "  \"index\": \"$answer\",\n" >> '../../.enclaverc'
 
+node add-script.js
+
 while true; do
-    read -p "Do you want to enable live reload? " yn
+    read -p "Do you want to enable live reload? y/n" yn
     case $yn in
         [Yy]* ) printf "  \"live\": \"true\",\n}" >> '../../.enclaverc'; break;;
         [Nn]* ) printf "  \"live\": \"false\",\n}" >> '../../.enclaverc'; exit;;
         * ) echo "Please answer yes or no.";;
     esac
 done
-
-node add-script.js
 
 echo -e "\x1b[25mWoo you're done! \x1b[0m"
 echo -e "\x1b[35mIf you need to edit any of the answers you gave, head over to the .enclaverc file in your app! \x1b[0m"
