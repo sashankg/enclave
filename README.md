@@ -42,22 +42,15 @@ class App extends React.Component {
 // hook into the `enclave` id, which is provided by enclave.
 render(<App />, document.getElementById('enclave'));
 ```
+> _don't forget to `$ npm install -S react react-dom` if you're going to use react :D_
 
-Once you're ready to compile your code, run this awkward command in your terminal:
-
-Add an `enclave` script to your `package.json`. 
-```json
-{
-  "scripts": {
-    "enclave": "enclave"
-  }
-}
+Enclave will automagically add a script to your `package.json` file which will allow you to run everything. 
+To run it, type the following in your terminal:
+```
+$ npm start
 ```
 
-Once you're ready to compile your code, run the script:
-```
-$ npm run enclave
-```
+If you want to edit your scripts, you can just move the start command somewhere else.
 
 Then find your app at `http://localhost:3000`
 > If you don't specify a port in your .enclaverc file then your app will be served on port 8080.
