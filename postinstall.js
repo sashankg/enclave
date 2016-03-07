@@ -5,7 +5,7 @@ var prompts = require('./prompts')
 const Ora = require('ora');
 
 const spinner = new Ora({
-  text: 'Compiling...',
+  text: 'Sit tight while I compile your things...',
   spinner: {
     "interval": 50,
     "frames": [
