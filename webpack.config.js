@@ -1,6 +1,6 @@
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin')
-var settings = require('./enclave.js')
+var settings = require('../../enclave.js')
 var stringSafetyNet = require('./utils').stringSafetyNet
 var HotReloader = new webpack.HotModuleReplacementPlugin();
 
