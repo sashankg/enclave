@@ -1,14 +1,13 @@
 {
   "name": "enclave",
-  "version": "0.7.11",
+  "version": "0.7.12",
   "description": "An API for compiling React applications with Webpack",
   "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/eanplatter/enclave.git"
   },
-  "scripts": { 
-    "start": "node node_modules/enclave/index.js",
+  "scripts": {
     "start": "webpack-dev-server",
     "postinstall": "node postinstall.js",
     "prestart": "webpack"
