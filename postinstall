@@ -7,29 +7,38 @@ Thank you for using...
  \___|_| |_|\___|_|\__,_| \_/ \___|
 
 EOF
-echo -e "\x1b[35mWhere is the file you want enclave to use as your entry point? \x1b[0m"
+echo -e "\x1b[35mWhere do you think I might be able to find your app's entry point? Example: src/App.js \x1b[0m"
 read answer
     printf "{ \n  \"entry\": \"$answer\",\n" > '../../.enclaverc'
 
-echo -e "\x1b[36mWhat directory do you want to have enclave output to? \x1b[0m"
+echo -e "\x1b[36mIs there a specific name you want me to send your code after I compile it, if so what is it? Example: build. If you don't specify a name, I will compile your code to a folder named dist. \x1b[0m"
 read answer
     printf "  \"output\": \"$answer\",\n" >> '../../.enclaverc'
 
-echo -e "\x1b[34mWhat port do you want your app to run on? \x1b[0m"
+echo -e "\x1b[34mWhat port would you like this all to run on? Example: 3000. If you don't specify a port I will automatically send it to port 8080. \x1b[0m"
 read answer
     printf "  \"port\": \"$answer\",\n" >> '../../.enclaverc'
 
-echo -e "\x1b[32mWhere is your index.html file? \x1b[0m"
+echo -e "\x1b[32mWhere does (or will) your index.html file live? Example: src/index.html \x1b[0m"
 read answer
     printf "  \"index\": \"$answer\",\n" >> '../../.enclaverc'
 
 node add-script.js
 
 while true; do
-    read -p "Do you want to enable live reload? y/n " yn
+    read -p "Would you like me to turn live reload on in your app? y/n " yn
     case $yn in
         [Yy]* ) printf "  \"live\": \"true\",\n}" >> '../../.enclaverc'; break;;
-        [Nn]* ) printf "  \"live\": \"false\",\n}" >> '../../.enclaverc'; exit;;
+        [Nn]* ) printf "  \"live\": \"false\",\n}" >> '../../.enclaverc'; break;;
+        * ) echo "Please answer yes or no.";;
+    esac
+done
+
+while true; do
+    read -p "Would you like me to install React for you? y/n " yn
+    case $yn in
+        [Yy]* ) exec cd .. && cd .. && npm i -S react react-dom; break;;
+        [Nn]* ) echo "Sounds good, I won't install React"; break;;
         * ) echo "Please answer yes or no.";;
     esac
 done
