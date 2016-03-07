@@ -2,6 +2,11 @@ var colors = require('colors')
 var shell = require('shelljs')
 var prompt = require('prompt')
 var prompts = require('./prompts')
+const ora = require('ora');
+
+const spinner = ora('Getting everything settled.');
+spinner.color = 'yellow'
+
 prompt.start()
 
 function onErr(err) {
@@ -28,5 +33,9 @@ prompt.get(prompts, function (err, result) {
   console.log('  live: '.red + result.live)
   console.log('To run your app, just type'.green, '$ npm start'.bold.green)
   var newScript = "\"scripts\": { \n    \"start\": \"node node_modules/enclave/index.js\","
+  spinner.start();
+  setTimeout(() => {
+    spinner.stop()
+  }, 3000)
   shell.sed('-i', '"scripts": {', newScript, '../../package.json');
 })
