@@ -2,11 +2,27 @@ var colors = require('colors')
 var shell = require('shelljs')
 var prompt = require('prompt')
 var prompts = require('./prompts')
-const ora = require('ora');
+const Ora = require('ora');
 
-const spinner = ora('Getting everything settled.');
-spinner.color = 'yellow'
-
+const spinner = new Ora({
+  text: 'Compiling...',
+  spinner: {
+    "interval": 50,
+    "frames": [
+      "▁▆▃▃▄▆▅▄▅▁▁▆▃▃▄▆",
+      "▃▅▁▁▃▅▄▃▄▃▃▅▁▁▃▅",
+      "▄▄▃▃▁▄▃▁▃▄▄▄▃▃▁▄",
+      "▅▃▄▄▃▃▁▃▁▅▅▃▄▄▃▃",
+      "▆▁▅▅▄▁▃▄▃▆▆▁▅▅▄▁",
+      "▇▃▆▆▅▃▄▅▄▇▇▃▆▆▅▃",
+      "▆▄▇▇▆▄▅▆▅▆▆▄▇▇▆▄",
+      "▅▅▆▆▇▅▆▇▆▅▅▅▆▆▇▅",
+      "▄▆▅▅▆▆▇▆▇▄▄▆▅▅▆▆",
+      "▃▇▄▄▅▇▆▅▆▃▃▇▄▄▅▇",
+    ]
+  },
+});
+spinner.color = 'green'
 prompt.start()
 
 function onErr(err) {
@@ -36,6 +52,6 @@ prompt.get(prompts, function (err, result) {
   spinner.start();
   setTimeout(() => {
     spinner.stop()
-  }, 3000)
+  }, 5000)
   shell.sed('-i', '"scripts": {', newScript, '../../package.json');
 })
