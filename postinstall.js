@@ -10,13 +10,13 @@ function onErr(err) {
 }
 
 prompt.get(prompts, function (err, result) {
-  shell.exec('rm ../../.enclaverc')
-  shell.exec('touch ../../.enclaverc')
+  shell.exec('rm ./enclave.js')
+  shell.exec('touch ./enclave.js')
   for (var key in result) {
-    shell.echo("module.exports " + key + " = " + JSON.stringify(result[key]) + '\n').toEnd('../../.enclaverc')
+    shell.echo("exports." + key + " = " + JSON.stringify(result[key]) + '\n').toEnd('./enclave.js')
   }
   if (err) { return onErr(err) }
-  console.log('Here\'s what I\'ve got down, if something is wrong you can edit this in your .enclaverc file.:'.yellow)
+  console.log('Here\'s what I\'ve got down, if something is wrong you can edit this in your enclave.js file.:'.yellow)
   console.log('  entry: '.red + result.entry.magenta)
   console.log('  output: '.red + result.output.magenta)
   console.log('  port: '.red + result.port.magenta)
@@ -24,5 +24,5 @@ prompt.get(prompts, function (err, result) {
   console.log('  live: '.red + result.live.magenta)
   console.log('To run your app, just type'.green, '$ npm start'.bold.green)
   var newScript = "\"scripts\": { \n    \"start\": \"node node_modules/enclave/index.js\","
-  shell.sed('-i', '"scripts": {', newScript, '../../package.json');
+  shell.sed('-i', '"scripts": {', newScript, './package.json');
 })
