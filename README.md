@@ -14,7 +14,7 @@ $ npm init
 $ npm i enclave --save
 ```
 
-Enclave will then take you through a series of prompts. The answers to these prompts will create a `.enclaverc` file in your application's root. This file is what enclave uses to reference your build. If you need to change any of your settings, you can do that directly in the `.enclaverc` file.
+Enclave will then take you through a series of prompts. The answers to these prompts will create a `enclave.js` file in your application's root. This file is what enclave uses to reference your build. If you need to change any of your settings, you can do that directly in the `enclave.js` file.
 
 Create an entry point for your application:
 ```
@@ -65,27 +65,25 @@ $ npm start
 If you want to edit your scripts, you can just move the start command somewhere else.
 
 Then find your app at `http://localhost:3000`
-> If you don't specify a port in your .enclaverc file then your app will be served on port 8080.
+> If you don't specify a port in your enclave.js file then your app will be served on port 8080.
 
 ##Currently supported settings
 
-When enclave is installed in your project, it creates an `.enclaverc` file, this is where your settings are stored. Currently supported settings are:
+When enclave is installed in your project, it creates an `enclave.js` file, this is where your settings are stored. Currently supported settings are:
   - entry: {string} The relative path of your entry file, it tells Webpack where to start compiling. Ex. "src/App.js"
   - output: {string} The relative path and name of the directory you want Webpack to spit your compiled code into. Ex. "dist"
   - port: {number} The port where you want your app to run. Ex. 3000
   - index: {string} The relative path of your `index.html` file. Ex. "src/index.html"
   - live: {boolean} Whether you want live-reload or not. Takes in "t", "f", "true", or "false"
 
-After your complete enclave's prompts, you'll find a `.enclave` file in your app. If you need to edit any of the answers you gave you can do that here. It should look something like this:
+After your complete enclave's prompts, you'll find a `enclave.js` file in your app. If you need to edit any of the answers you gave you can do that here. It should look something like this:
 
 ```js
-/* .enclaverc */
-{ 
-  "entry": "src/App.js",
-  "output": "dist",
-  "port": "3000",
-  "index": "src/index.html",
-  "live": "true",
-}
+/* enclave.js */
+exports.entry = "src/App.js"
+exports.output = "dist"
+exports.port = 3000
+exports.index = "src/index.html"
+exports.live = true
 ```
 
