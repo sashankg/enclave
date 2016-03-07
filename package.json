@@ -1,6 +1,6 @@
 {
   "name": "enclave",
-  "version": "0.7.9",
+  "version": "0.7.16",
   "description": "An API for compiling React applications with Webpack",
   "main": "index.js",
   "repository": {
@@ -8,9 +8,9 @@
     "url": "https://github.com/eanplatter/enclave.git"
   },
   "scripts": {
+    "start": "webpack-dev-server",
     "postinstall": "node postinstall.js",
-    "prestart": "webpack",
-    "start": "webpack-dev-server"
+    "prestart": "webpack"
   },
   "bin": {
     "enclave": "index.js"
@@ -22,6 +22,7 @@
     "colors": "^1.1.2",
     "history": "^1.13.0",
     "html-webpack-plugin": "^1.6.2",
+    "ora": "^0.2.0",
     "prompt": "^1.0.0",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",

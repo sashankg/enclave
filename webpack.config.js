@@ -1,6 +1,6 @@
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin')
-var settings = require('./settings.js')
+var settings = require('../../enclave.js')
 var stringSafetyNet = require('./utils').stringSafetyNet
 var HotReloader = new webpack.HotModuleReplacementPlugin();
 
@@ -24,7 +24,7 @@ var entryArr = [
 })
 
 var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
-  template: '../../' + stringSafetyNet(settings.index, 'index.html'),
+  template: '../../' + stringSafetyNet(settings.index, 'src/index.html'),
   filename: 'index.html',
   inject: 'body'
 })
