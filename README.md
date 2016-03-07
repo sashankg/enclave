@@ -74,7 +74,7 @@ When enclave is installed in your project, it creates an `.enclaverc` file, this
   - output: {string} The relative path and name of the directory you want Webpack to spit your compiled code into. Ex. "dist"
   - port: {number} The port where you want your app to run. Ex. 3000
   - index: {string} The relative path of your `index.html` file. Ex. "src/index.html"
-  - live: {boolean} Whether you want live-reload or not. Takes in "Y" or "N"
+  - live: {boolean} Whether you want live-reload or not. Takes in "t", "f", "true", or "false"
 
 After your complete enclave's prompts, you'll find a `.enclave` file in your app. If you need to edit any of the answers you gave you can do that here. It should look something like this:
 
