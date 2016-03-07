@@ -7,7 +7,7 @@
     "type": "git",
     "url": "https://github.com/eanplatter/enclave.git"
   },
-  "scripts": {
+  "scripts": { 
     "start": "webpack-dev-server",
     "postinstall": "node postinstall.js",
     "prestart": "webpack"

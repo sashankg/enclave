@@ -15,9 +15,9 @@ var prompts = [
   },
   {
     description: 'What port would you like this all to run on? Example: 3000. If you don\'t specify a port I will automatically send it to port 8080.'.green,
-    message: 'This information is required',
-    type: 'string',
-    required: true,
+    message: 'Please enter a number.',
+    type: 'number',
+    required: false,
     name: 'port'
   },
   {
@@ -28,9 +28,9 @@ var prompts = [
     name: 'index'
   },
   {
-    description: 'Would you like me to turn live reload on in your app? y/n'.green,
-    message: 'This information is required',
-    type: 'string',
+    description: 'Would you like me to turn live reload on in your app? true/false'.green,
+    message: 'Please enter a boolean, true or false',
+    type: 'boolean',
     required: true,
     name: 'live'
   }
