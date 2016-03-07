@@ -42,7 +42,6 @@ class App extends React.Component {
 // hook into the `enclave` id, which is provided by enclave.
 render(<App />, document.getElementById('root'));
 ```
-> _don't forget to `$ npm install -S react react-dom` if you're going to use react :D_
 
 Configure your `index.html` file to have something with the id your react app is looking to hook into ("root" in this case)
 ``` html
