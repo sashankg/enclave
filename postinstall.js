@@ -10,13 +10,13 @@ function onErr(err) {
 }
 shell.exec('bash ./asciiart')
 prompt.get(prompts, function (err, result) {
-  shell.exec('rm ./enclave.js')
-  shell.exec('touch ./enclave.js')
+  shell.exec('rm ../../enclave.js')
+  shell.exec('touch ../../enclave.js')
   for (var key in result) {
     if (key === 'port' && !result[key] || key === 'port' && result[key] !== result[key]) {
-      shell.echo("exports." + key + " = 8080" + '\n').toEnd('./enclave.js')
+      shell.echo("exports." + key + " = 8080" + '\n').toEnd('../../enclave.js')
     } else {
-      shell.echo("exports." + key + " = " + JSON.stringify(result[key]) + '\n').toEnd('./enclave.js')
+      shell.echo("exports." + key + " = " + JSON.stringify(result[key]) + '\n').toEnd('../../enclave.js')
     }
   }
   if (err) { return onErr(err) }
@@ -28,5 +28,5 @@ prompt.get(prompts, function (err, result) {
   console.log('  live: '.red + result.live)
   console.log('To run your app, just type'.green, '$ npm start'.bold.green)
   var newScript = "\"scripts\": { \n    \"start\": \"node node_modules/enclave/index.js\","
-  shell.sed('-i', '"scripts": {', newScript, './package.json');
+  shell.sed('-i', '"scripts": {', newScript, '../../package.json');
 })
