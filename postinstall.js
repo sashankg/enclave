@@ -8,7 +8,7 @@ function onErr(err) {
   console.log(err)
   return 1
 }
-
+shell.exec('bash ./asciiart')
 prompt.get(prompts, function (err, result) {
   shell.exec('rm ./enclave.js')
   shell.exec('touch ./enclave.js')
