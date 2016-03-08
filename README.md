@@ -11,7 +11,7 @@
 $ mkdir my-new-app
 $ cd my-new-app
 $ npm init
-$ npm install enclave-cli --save
+$ npm install enclave --save
 ```
 
 Enclave will then take you through a series of prompts. The answers to these prompts will create a `enclave.js` file in your application's root. This file is what enclave uses to reference your build. If you need to change any of your settings, you can do that directly in the `enclave.js` file.
