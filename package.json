@@ -1,6 +1,6 @@
 {
-  "name": "enclave-cli",
-  "version": "0.1.0",
+  "name": "enclave",
+  "version": "0.8.0",
   "description": "An API for compiling React applications with Webpack",
   "main": "index.js",
   "repository": {
