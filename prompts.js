@@ -1,35 +1,35 @@
 var prompts = [
   {
-    description: 'Where do you think I might be able to find your app\'s entry point? Example: src/App.js'.green,
-    message: 'This information is required',
+    description: 'Where do you think I might be able to find your app\'s entry point? (App.js)'.green,
+    default: 'App.js'
     type: 'string',
-    required: true,
+    required: false,
     name: 'entry',
   },
   {
-    description: 'Is there a specific name you want me to send your code after I compile it, if so what is it?'.green,
-    message: 'This information is required',
+    description: 'Is there a specific name you want me to send your code after I compile it, if so what is it? (dist)'.green,
+    default: 'dist',
     type: 'string',
-    required: true,
+    required: false,
     name: 'output',
   },
   {
-    description: 'What port would you like this all to run on? Example: 3000. If you don\'t specify a port I will automatically send it to port 8080.'.green,
-    message: 'Please enter a number.',
+    description: 'What port would you like this all to run on? (8080)'.green,
+    default: '8080'
     type: 'number',
     required: false,
     name: 'port'
   },
   {
-    description: 'Where does (or will) your index.html file live? Example: src/index.html'.green,
-    message: 'This information is required',
+    description: 'Where does (or will) your index.html file live? (index.html)'.green,
+    default: 'index.html',
     type: 'string',
-    required: true,
+    required: false,
     name: 'index'
   },
   {
     description: 'Would you like me to turn live reload on in your app? true/false'.green,
-    message: 'Please enter a boolean, true or false',
+    message: 'Please enter a boolean, true or false'.red,
     type: 'boolean',
     required: true,
     name: 'live'
