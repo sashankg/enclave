@@ -50,7 +50,7 @@ prompt.start()
 /**
  * Throw down that postinstall logo.
  */
-shell.exec('bash ./node_modules/enclave/src/cli-helpers/postinstall-logo')
+shell.exec('bash ./src/cli-helpers/postinstall-logo')
 
 /**
  * Clean out any currently existing config file for a fresh one.
