@@ -37,7 +37,7 @@ function preventFinishFor(time) {
 var insertScript = {
   flag: '-i',
   insertionPoint: '"scripts": {',
-  addition: "\"scripts\": { \n    \"start\": \"node node_modules/enclave/index.js\",",
+  addition: "\"scripts\": { \n    \"start\": \"node node_modules/enclave/src/index.js\",",
   file: clientFiles.package
 }
 
