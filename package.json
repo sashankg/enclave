@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "webpack-dev-server",
-    "postinstall": "node postinstall.js",
+    "postinstall": "node src/postinstall/index.js",
     "prestart": "webpack"
   },
   "bin": {

@@ -2,29 +2,8 @@ var colors = require('colors')
 var shell = require('shelljs')
 var prompt = require('prompt')
 var prompts = require('./prompts')
-const Ora = require('ora');
-
-const spinner = new Ora({
-  text: 'Sit tight while I compile your things...',
-  spinner: {
-    "interval": 50,
-    "frames": [
-      "▁▆▃▃▄▆▅▄▅▁▁▆▃▃▄▆",
-      "▃▅▁▁▃▅▄▃▄▃▃▅▁▁▃▅",
-      "▄▄▃▃▁▄▃▁▃▄▄▄▃▃▁▄",
-      "▅▃▄▄▃▃▁▃▁▅▅▃▄▄▃▃",
-      "▆▁▅▅▄▁▃▄▃▆▆▁▅▅▄▁",
-      "▇▃▆▆▅▃▄▅▄▇▇▃▆▆▅▃",
-      "▆▄▇▇▆▄▅▆▅▆▆▄▇▇▆▄",
-      "▅▅▆▆▇▅▆▇▆▅▅▅▆▆▇▅",
-      "▄▆▅▅▆▆▇▆▇▄▄▆▅▅▆▆",
-      "▃▇▄▄▅▇▆▅▆▃▃▇▄▄▅▇",
-    ]
-  },
-});
-spinner.color = 'green'
+var spinner = require('../cli-helpers/spinner')
 prompt.start()
-
 function onErr(err) {
   console.log(err)
   return 1
