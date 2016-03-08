@@ -18,13 +18,13 @@ if (JSON.parse(settings.live)) {
 var entryArr = [
   liveReloadPort,
   liveReloadServer,
-  '../../' + stringSafetyNet(settings.entry, 'src/App.js')
+  '../../' + stringSafetyNet(settings.entry, 'App.js')
 ].filter(function(item) {
   return !!item && item
 })
 
 var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
-  template: '../../' + stringSafetyNet(settings.index, 'src/index.html'),
+  template: '../../' + stringSafetyNet(settings.index, 'index.html'),
   filename: 'index.html',
   inject: 'body'
 })
