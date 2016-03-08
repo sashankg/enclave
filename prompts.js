@@ -1,7 +1,7 @@
 var prompts = [
   {
     description: 'Where do you think I might be able to find your app\'s entry point? (App.js)'.green,
-    default: 'App.js'
+    default: 'App.js',
     type: 'string',
     required: false,
     name: 'entry',
@@ -15,7 +15,7 @@ var prompts = [
   },
   {
     description: 'What port would you like this all to run on? (8080)'.green,
-    default: '8080'
+    default: '8080',
     type: 'number',
     required: false,
     name: 'port'
