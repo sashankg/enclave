@@ -80,4 +80,4 @@ function configureConfigFile(err, result) {
   preventFinishFor(5000)
 }
 
-prompt.get(prompts, configureConfigFile(err, result))
+prompt.get(prompts, configureConfigFile)
