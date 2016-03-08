@@ -20,7 +20,7 @@ Create an entry point for your application:
 ```
 $ mkdir src && touch src/Main.js src/index.html
 ```
-Write some code, if you're doing React, something like this should work:
+Write some code, something like this should work:
 ``` js
 /* src/Main.js */
 
@@ -39,7 +39,6 @@ class App extends React.Component {
   }
 }
 
-// hook into the `enclave` id, which is provided by enclave.
 render(<App />, document.getElementById('root'));
 ```
 
@@ -55,17 +54,17 @@ Configure your `index.html` file to have something with the id your react app is
 </body>
 </html>
 ```
+> _Also, this is where you would do things like hook in a cdn or google fonts or whatevs._
 
-Enclave will automagically add a script to your `package.json` file which will allow you to run everything.
+Enclave will _automagically_ add a script to your `package.json` file which will allow you to run everything.
 To run it, type the following in your terminal:
 ```
 $ npm start
 ```
+> _If you want to edit your scripts, you can just move the start command somewhere else._
 
-If you want to edit your scripts, you can just move the start command somewhere else.
-
-Then find your app at `http://localhost:3000`
-> If you don't specify a port in your enclave.js file then your app will be served on port 8080.
+Then find your app at `http://localhost:8080`
+> _If you set your port to something other than 8080, then go there instead!_.
 
 ##Currently supported settings
 
