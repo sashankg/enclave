@@ -40,7 +40,7 @@ Create an entry point for your application:
 ```
 $ mkdir src && touch src/Main.js src/index.html
 ```
-Write some code, something like this should work:
+Now you'll be able to write some crazy JSX and ES2015 code like this:
 ``` js
 /* src/Main.js */
 
