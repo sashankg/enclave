@@ -41,23 +41,18 @@ var insertScript = {
   file: clientFiles.package
 }
 
-
 /**
- * Start the CLI prompt.
+ * This method is really ugly and imperative, I'm sorry.
+ *
+ * It loops through the prompt's result object, and adds each result to a file in the user's root
+ * to be referenced later.
+ *
+ * It also console logs the result object with this weird color library that extends the String
+ * prototype to have color properties, god this is terrible.
+ * @param err
+ * @param {object} result
+ * @returns {number}
  */
-prompt.start()
-
-/**
- * Throw down that postinstall logo.
- */
-shell.exec('bash ./src/cli-helpers/postinstall-logo')
-
-/**
- * Clean out any currently existing config file for a fresh one.
- */
-shell.exec('rm ' + clientFiles.config)
-shell.exec('touch ' + clientFiles.config)
-
 function configureConfigFile(err, result) {
   for (var key in result) {
     if (key === 'port' && !result[key] || key === 'port' && result[key] !== result[key]) {
@@ -80,4 +75,23 @@ function configureConfigFile(err, result) {
   preventFinishFor(5000)
 }
 
+/**
+ * Start the CLI prompt.
+ */
+prompt.start()
+
+/**
+ * Throw down that postinstall logo.
+ */
+shell.exec('bash ./src/cli-helpers/postinstall-logo')
+
+/**
+ * Clean out any currently existing config file for a fresh one.
+ */
+shell.exec('rm ' + clientFiles.config)
+shell.exec('touch ' + clientFiles.config)
+
+/**
+ * Actually executing all of this magic.
+ */
 prompt.get(prompts, configureConfigFile)

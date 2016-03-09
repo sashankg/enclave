@@ -1,3 +1,9 @@
+/**
+ * An array of objects of strings... If we need to change or add prompts to the postinstall script
+ * we can do that here. These prompts are formatted to work with the https://github.com/flatiron/prompt
+ * library.
+ * @type {*[]}
+ */
 var prompts = [
   {
     description: 'Where do you think I might be able to find your app\'s entry point? (App.js)'.green,
