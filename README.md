@@ -20,6 +20,13 @@ All in all, this is open experimentation, and not production worthy in any sense
 
 
 ##Getting Started:
+###Short Version:
+```
+$ npm i enclave -S
+$ npm start
+```
+
+###Long version
 ```
 $ mkdir my-new-app
 $ cd my-new-app
