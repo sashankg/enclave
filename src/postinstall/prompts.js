@@ -10,14 +10,14 @@ var prompts = [
     default: 'App.js',
     type: 'string',
     required: false,
-    name: 'entry',
+    name: 'entry'
   },
   {
     description: 'Is there a specific name you want me to send your code after I compile it, if so what is it? (dist)'.green,
     default: 'dist',
     type: 'string',
     required: false,
-    name: 'output',
+    name: 'output'
   },
   {
     description: 'What port would you like this all to run on? (8080)'.green,

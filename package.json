@@ -10,7 +10,8 @@
   "scripts": {
     "start": "webpack-dev-server",
     "postinstall": "node src/postinstall/index.js",
-    "prestart": "webpack"
+    "prestart": "webpack",
+    "lint": "eslint src/*"
   },
   "bin": {
     "enclave": "src/index.js"

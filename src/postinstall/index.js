@@ -1,4 +1,3 @@
-var colors = require('colors')
 var shell = require('shelljs')
 var prompt = require('prompt')
 var prompts = require('./prompts')
@@ -37,7 +36,7 @@ function preventFinishFor(time) {
 var insertScript = {
   flag: '-i',
   insertionPoint: '"scripts": {',
-  addition: "\"scripts\": { \n    \"start\": \"node node_modules/enclave/src/index.js\",",
+  addition: '\"scripts\": { \n    \"start\": \"node node_modules/enclave/src/index.js\",',
   file: clientFiles.package
 }
 
@@ -56,9 +55,9 @@ var insertScript = {
 function configureConfigFile(err, result) {
   for (var key in result) {
     if (key === 'port' && !result[key] || key === 'port' && result[key] !== result[key]) {
-      shell.echo("exports." + key + " = 8080" + '\n').toEnd(clientFiles.config)
+      shell.echo('exports.' + key + ' = 8080' + '\n').toEnd(clientFiles.config)
     } else {
-      shell.echo("exports." + key + " = " + JSON.stringify(result[key]) + '\n').toEnd(clientFiles.config)
+      shell.echo('exports.' + key + ' = ' + JSON.stringify(result[key]) + '\n').toEnd(clientFiles.config)
     }
   }
   if (err) {
