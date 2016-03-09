@@ -6,6 +6,19 @@
   A lightweight API for compiling React applications with Webpack and Babel.
 </p>
 
+##Philosophy
+This project comes from a combination of two things, a complexity of configuring React applications with Webpack and Babel (especially for beginners), and my experience with compile-to-JavaScript languages, like Elm or CoffeeScript.
+
+I thought it would be nice to be able to write JSX and ES201* the same way I wrote Elm. Just do it, and let some magic happen behind the scenes to make it browser ready.
+
+With this approach in mind I started with the API I wanted for something like this. Disclosure: currently I am using some antiques of 2015 like HRM, and Babel5, primarily for convenience. I am also using Webpack. 
+
+What I would like to do is eventually level enclave to the point where it maintains a sane API but is less reliant on Webpack, maybe even do the compile myself.
+
+All in all, this is open experimentation, and not production worthy in any sense. Hopefully if you're wanting to get started with React you'll find Enclave is a helpful tool to get you up and running quickly.
+
+
+
 ##Getting Started:
 ```
 $ mkdir my-new-app
@@ -85,3 +98,8 @@ exports.port = 3000
 exports.index = "src/index.html"
 exports.live = true
 ```
+
+##Contributing
+If you're interested in contributing please make a PR. The code is pretty rocky right now, but I'd be stoked to see some participation. I've tried to document the code so that it's understandable how things work together. It's pretty small at the moment.
+
+Just make a fork and a PR!
