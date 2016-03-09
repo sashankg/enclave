@@ -6,14 +6,23 @@
   A lightweight API for compiling React applications with Webpack and Babel.
 </p>
 
+##What is this?
+This is a npm module you can install into a new project. It does all of the dirty work of compiling your JSX and ES2015 code into browser-ready JavaScript.
+
+##Why do I want this?
+If you've ever had to make a React app from scratch, you know it can be rough to set up. There are a lot of moving parts, it's nothing like dropping the Angular CDN into your index.html file and hitting run. There is a lot of configuration involved with React. Enclave takes away the configuration and replaces it with simplicity. 
+
+##Who is this for?
+Primarily for people who are wanting to get started with React, and for people who want to greenfield a new React project quickly, but don't want to have someone else's boilerplate in their project, like you might find with a starter kit.
+
 ##Philosophy
 This project comes from a combination of two things, a complexity of configuring React applications with Webpack and Babel (especially for beginners), and my experience with compile-to-JavaScript languages, like Elm or CoffeeScript.
 
 I thought it would be nice to be able to write JSX and ES201* the same way I wrote Elm. Just do it, and let some magic happen behind the scenes to make it browser ready.
 
-With this approach in mind I started with the API I wanted for something like this. Disclosure: currently I am using some antiques of 2015 like HRM, and Babel5, primarily for convenience. I am also using Webpack. 
+With this approach in mind I started with the API I wanted for something like this. 
 
-What I would like to do is eventually level enclave to the point where it maintains a sane API but is less reliant on Webpack, maybe even do the compile myself.
+What I would like to do is eventually level enclave to the point where it maintains a sane API but is less reliant on Webpack, maybe even have it do the compiling as well.
 
 All in all, this is open experimentation, and not production worthy in any sense. Hopefully if you're wanting to get started with React you'll find Enclave is a helpful tool to get you up and running quickly.
 
