@@ -7,24 +7,24 @@
 </p>
 
 ##What is this?
-This is a npm module you can install into a new project. It does all of the dirty work of compiling your JSX and ES2015 code into browser-ready JavaScript.
+An npm module which handles compiling your JSX and ES2015 code into browser-ready JavaScript.
 
 ##Why do I want this?
-If you've ever had to make a React app from scratch, you know it can be rough to set up. There are a lot of moving parts, it's nothing like dropping the Angular CDN into your index.html file and hitting run. There is a lot of configuration involved with React. Enclave takes away the configuration and replaces it with simplicity. 
+If you've ever had to make a React app from scratch, you know it can be rough to set up. Enclave removes the set up so you can focus on what's important, building your app.
 
 ##Who is this for?
-Primarily for people who are wanting to get started with React, and for people who want to greenfield a new React project quickly, but don't want to have someone else's boilerplate in their project, like you might find with a starter kit.
+Primarily for those who don't want to go through the hassle of setting up a React project but who still want to flexibility that a starter kit can't provide.
 
 ##Philosophy
 This project comes from a combination of two things, a complexity of configuring React applications with Webpack and Babel (especially for beginners), and my experience with compile-to-JavaScript languages, like Elm or CoffeeScript.
 
-I thought it would be nice to be able to write JSX and ES201* the same way I wrote Elm. Just do it, and let some magic happen behind the scenes to make it browser ready.
+I thought it would be nice to be able to write JSX and ES* the same way I wrote Elm. Just do it, and let some magic happen behind the scenes to make it browser compatible.
 
-With this approach in mind I started with the API I wanted for something like this. 
+Enclave was created with this approach in mind. 
 
 What I would like to do is eventually level enclave to the point where it maintains a sane API but is less reliant on Webpack, maybe even have it do the compiling as well.
 
-All in all, this is open experimentation, and not production worthy in any sense. Hopefully if you're wanting to get started with React you'll find Enclave is a helpful tool to get you up and running quickly.
+All in all, this is open experimentation. Hopefully if you're wanting to get started with React you'll find Enclave is a helpful tool to get you up and running quickly.
 
 
 
@@ -97,7 +97,7 @@ Then find your app at `http://localhost:8080`
 
 ##Currently supported settings
 
-When enclave is installed in your project, it creates an `enclave.js` file, this is where your settings are stored. Currently supported settings are:
+When enclave is installed in your project, it creates an `enclave.js` file. This is where your settings are stored. Currently supported settings are:
   - entry: {string} The relative path of your entry file, it tells Webpack where to start compiling. Ex. "src/App.js"
   - output: {string} The relative path and name of the directory you want Webpack to spit your compiled code into. Ex. "dist"
   - port: {number} The port where you want your app to run. Ex. 3000
@@ -116,6 +116,6 @@ exports.live = true
 ```
 
 ##Contributing
-If you're interested in contributing please make a PR. The code is pretty rocky right now, but I'd be stoked to see some participation. I've tried to document the code so that it's understandable how things work together. It's pretty small at the moment.
+If you're interested in contributing please make a PR. The code is pretty rocky right now, but I'd be stoked to see some participation. I've tried to document the code so that it's understandable. It's pretty small at the moment.
 
 Just make a fork and a PR!
