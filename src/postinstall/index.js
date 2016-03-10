@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 var shell = require('shelljs')
 var prompt = require('prompt')
 var prompts = require('./prompts')
@@ -36,7 +37,7 @@ function preventFinishFor(time) {
 var insertScript = {
   flag: '-i',
   insertionPoint: '"scripts": {',
-  addition: '\"scripts\": { \n    \"start\": \"node node_modules/enclave/src/index.js\",',
+  addition: '"scripts": {\n    "start": "enclave",',
   file: clientFiles.package
 }
 
