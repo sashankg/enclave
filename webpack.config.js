@@ -37,7 +37,7 @@ module.exports = {
   },
   module: {
     loaders: [
-      {test: /\.js$/, exclude: /node_modules/, loader: "react-hot!babel"}
+      {test: /\.js[x]?$/, exclude: /node_modules/, loader: "react-hot!babel"}
     ]
   },
   plugins: [HTMLWebpackPluginConfig, HotReloader],
