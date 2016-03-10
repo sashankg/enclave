@@ -12,4 +12,4 @@ var userSettings = require('../../../enclave.js')
  * It's big and messy, it would be nice to have enclave mask it.
  */
 shell.echo('Let the drive sequence begin, hit it Pinback.')
-shell.exec('cd node_modules/enclave && webpack && webpack-dev-server --port ' + JSON.parse(userSettings.port))
+shell.exec('cd node_modules/enclave && webpack --color && webpack-dev-server --colors --port ' + JSON.parse(userSettings.port))
