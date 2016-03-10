@@ -37,7 +37,12 @@ module.exports = {
   },
   module: {
     loaders: [
+<<<<<<< 56747c69de993da93a41eafef663be8c61c73026
       {test: /\.js[x]?$/, exclude: /node_modules/, loader: "react-hot!babel"}
+=======
+      {test: /\.js$/, exclude: /node_modules/, loader: "react-hot!babel"},
+      {test: /\.json$/, exclude: /node_modules/, loader: "json"}
+>>>>>>> Added json-loader support #12
     ]
   },
   plugins: [HTMLWebpackPluginConfig, HotReloader],
