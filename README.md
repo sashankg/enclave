@@ -47,11 +47,11 @@ Enclave will then take you through a series of prompts. The answers to these pro
 
 Create an entry point for your application:
 ```
-$ mkdir src && touch src/Main.js src/index.html
+$ mkdir src && touch src/App.js src/index.html
 ```
 Now you'll be able to write some crazy JSX and ES2015 code like this:
 ``` js
-/* src/Main.js */
+/* src/App.js */
 
 import React from 'react';
 import { render } from 'react-dom';
