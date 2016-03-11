@@ -8,28 +8,28 @@ var chalk = require('chalk')
  */
 var prompts = [
   {
-    description: chalk.yellow('Where do you think I might be able to find your app\'s entry point? (App.js)'),
+    description: chalk.yellow('Where do you think I might be able to find your app\'s entry point?'),
     default: 'App.js',
     type: 'string',
     required: false,
     name: 'entry'
   },
   {
-    description: chalk.green('Is there a specific name you want me to send your code after I compile it, if so what is it? (dist)'),
+    description: chalk.green('Is there a specific name you want me to send your code after I compile it, if so what is it?'),
     default: 'dist',
     type: 'string',
     required: false,
     name: 'output'
   },
   {
-    description: chalk.blue('What port would you like this all to run on? (8080)'),
+    description: chalk.blue('What port would you like this all to run on?'),
     default: '8080',
     type: 'number',
     required: false,
     name: 'port'
   },
   {
-    description: chalk.cyan('Where does (or will) your index.html file live? (index.html)'),
+    description: chalk.cyan('Where does (or will) your index.html file live?'),
     default: 'index.html',
     type: 'string',
     required: false,
