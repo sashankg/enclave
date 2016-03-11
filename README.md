@@ -1,3 +1,6 @@
+[![npm downloads](https://img.shields.io/npm/dm/enclave.svg?style=flat-square)](http://npm-stat.com/charts.html?package=enclave&from=2016-03-01)
+[![Slack Status](http://enclave-cli.herokuapp.com/badge.svg)](https://enclave-cli.herokuapp.com/)
+
 <p align="center">
   <img alt="enclave" src="http://i1264.photobucket.com/albums/jj488/eanplatter1/enclave-logo_zpslmhskufg.png" width="546">
 </p>
@@ -5,8 +8,6 @@
 <p align="center">
   A simpler way to compile React applications.
 </p>
-[![npm downloads](https://img.shields.io/npm/dm/enclave.svg?style=flat-square)](http://npm-stat.com/charts.html?package=enclave&from=2016-03-01)
-[![Slack Status](http://enclave-cli.herokuapp.com/badge.svg)](https://enclave-cli.herokuapp.com/)
 
 
 ## What is this?
