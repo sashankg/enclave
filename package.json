@@ -11,6 +11,7 @@
     "postinstall": "node src/postinstall/index.js",
     "prestart": "webpack",
     "lint": "eslint src/*",
+    "install-deps": "npm install --ignore-scripts",
     "example": "webpack-dev-server"
   },
   "pre-commit": [

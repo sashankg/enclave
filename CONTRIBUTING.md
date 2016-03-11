@@ -16,6 +16,10 @@ Frontend development is inundated with complex tools and frameworks. Complexity 
 ## Code of conduct.
 Enclave as a tool is focused on reducing friction, and so is enclave's contributing. An open and frictionless environment of contributers is what we're aiming for. Be respectfut, don't say things you wouldn't say to someone's face.
 
+## Installing Dependencies
+
+`$ npm run install-deps` to install dependencies in development without running pre/postinstall scripts.
+
 ## Sandbox App
 There is an `example/` directory in enclave's root. In there you will find a basic app.
 
