@@ -6,21 +6,21 @@
   A simpler way to compile React applications.
 </p>
 
-##What is this?
+## What is this?
 An npm module which handles compiling your JSX and ES2015 code into browser-ready JavaScript.
 
-##Why do I want this?
+## Why do I want this?
 If you've ever had to make a React app from scratch, you know it can be rough to set up. Enclave removes the set up so you can focus on what's important, building your app.
 
-##Who is this for?
+## Who is this for?
 Primarily for those who don't want to go through the hassle of setting up a React project but who still want to flexibility that a starter kit can't provide.
 
-##Philosophy
+## Philosophy
 This project comes from a combination of two things, a complexity of configuring React applications with Webpack and Babel (especially for beginners), and my experience with compile-to-JavaScript languages, like Elm or CoffeeScript.
 
 I thought it would be nice to be able to write JSX and ES* the same way I wrote Elm. Just do it, and let some magic happen behind the scenes to make it browser compatible.
 
-Enclave was created with this approach in mind. 
+Enclave was created with this approach in mind.
 
 What I would like to do is eventually level enclave to the point where it maintains a sane API but is less reliant on Webpack, maybe even have it do the compiling as well.
 
@@ -28,14 +28,14 @@ All in all, this is open experimentation. Hopefully if you're wanting to get sta
 
 
 
-##Getting Started:
-###Short Version:
+## Getting Started:
+### Short Version:
 ```
 $ npm i enclave -S
 $ npm start
 ```
 
-###Long version
+### Long version
 ```
 $ mkdir my-new-app
 $ cd my-new-app
@@ -95,7 +95,7 @@ $ npm start
 Then find your app at `http://localhost:8080`
 > _If you set your port to something other than 8080, then go there instead!_.
 
-##Currently supported settings
+## Currently supported settings
 
 When enclave is installed in your project, it creates an `enclave.js` file. This is where your settings are stored. Currently supported settings are:
   - entry: {string} The relative path of your entry file, it tells Webpack where to start compiling. Ex. "src/App.js"
@@ -115,7 +115,6 @@ exports.index = "src/index.html"
 exports.live = true
 ```
 
-##Contributing
-If you're interested in contributing please make a PR. The code is pretty rocky right now, but I'd be stoked to see some participation. I've tried to document the code so that it's understandable. It's pretty small at the moment.
+## Contributing
 
-Just make a fork and a PR!
+[See the Contributing Guide](./CONTRIBUTING.md)

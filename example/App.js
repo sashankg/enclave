@@ -1,19 +1,11 @@
 import React from 'react'
 import { render } from 'react-dom'
-import ENV from './env.json'
+import Example from './components/Example.jsx'
 
 class App extends React.Component {
   render() {
     return (
-      <div style={{textAlign: 'center'}}>
-        <img style={{maxWidth: '500px'}} src='http://bit.ly/1YEe536'/>
-        <h1>
-          Example
-        </h1>
-        <pre>
-          {JSON.stringify(ENV)}
-        </pre>
-      </div>
+      <Example />
     )
   }
 }
