@@ -8,11 +8,14 @@
     "url": "https://github.com/eanplatter/enclave.git"
   },
   "scripts": {
-    "start": "webpack-dev-server",
     "postinstall": "node src/postinstall/index.js",
     "prestart": "webpack",
-    "lint": "eslint src/*"
+    "lint": "eslint src/*",
+    "example": "webpack-dev-server"
   },
+  "pre-commit": [
+    "lint"
+  ],
   "bin": {
     "enclave": "src/index.js"
   },
@@ -27,6 +30,7 @@
     "json-loader": "^0.5.4",
     "node-sass": "^3.4.2",
     "ora": "^0.2.0",
+    "pre-commit": "^1.1.2",
     "prompt": "^1.0.0",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
