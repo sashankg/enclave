@@ -6,6 +6,9 @@
   A simpler way to compile React applications.
 </p>
 
+[![Slack Status](http://enclave-cli.herokuapp.com/badge.svg)](https://enclave-cli.herokuapp.com/)
+
+
 ## What is this?
 An npm module which handles compiling your JSX and ES2015 code into browser-ready JavaScript.
 
