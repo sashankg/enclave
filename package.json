@@ -24,11 +24,8 @@
     "css-loader": "^0.23.1",
     "history": "^1.13.0",
     "html-webpack-plugin": "^1.6.2",
-<<<<<<< HEAD
     "json-loader": "^0.5.4",
-=======
     "node-sass": "^3.4.2",
->>>>>>> added css/scss support
     "ora": "^0.2.0",
     "prompt": "^1.0.0",
     "react": "^0.14.7",
