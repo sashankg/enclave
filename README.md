@@ -1,3 +1,4 @@
+[![npm version](https://img.shields.io/npm/v/enclave.svg?style=flat-square)](https://www.npmjs.org/package/enclave)
 [![Slack Status](http://enclave-cli.herokuapp.com/badge.svg)](https://enclave-cli.herokuapp.com/)
 [![npm downloads](https://img.shields.io/npm/dm/enclave.svg?style=flat-square)](http://npm-stat.com/charts.html?package=enclave&from=2016-03-01)
 
