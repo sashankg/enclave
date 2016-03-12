@@ -1,6 +1,6 @@
 {
   "name": "enclave",
-  "version": "0.8.15",
+  "version": "0.8.17",
   "description": "An API for compiling React applications with Webpack",
   "main": "index.js",
   "repository": {
@@ -21,7 +21,7 @@
     "enclave": "src/index.js"
   },
   "author": "Ean Platter <eanplatter@gmail.com> (eanplatter.github.io)",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "babel-core": "^6.7.2",
     "babel-loader": "^6.2.4",
