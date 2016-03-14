@@ -40,6 +40,10 @@ module.exports = {
         loader: 'json'
       },
       {
+        test: /\.(otf|eot|ttf|woff|png|jpe?g|txt)/i,
+        loader: 'url-loader?limit=8192'
+      },
+      {
         test: /\.[s]?css$/,
         exclude: /node_modules/,
         loader: 'style-loader!css-loader!sass-loader'
