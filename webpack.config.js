@@ -69,7 +69,7 @@ module.exports = {
         loader: 'json'
       },
       {
-        test: /\.(otf|eot|ttf|woff|png|jpe?g|txt)/i,
+        test: /\.(otf|eot|ttf|woff|svg|png|jpe?g|txt)/i,
         loader: 'url-loader?limit=8192'
       },
       {
