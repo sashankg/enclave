@@ -1,5 +1,6 @@
 var webpack = require('webpack')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
+var NpmInstallPlugin = require('npm-install-webpack-plugin')
 var settings = require('../../enclave.js')
 var stringSafetyNet = require('./src/utils/javascriptUtils').stringSafetyNet
 var pathPrefix = '../../'
@@ -20,6 +21,9 @@ module.exports = {
   entry: [
     pathPrefix + stringSafetyNet(settings.entry, 'App.js')
   ],
+  resolve: {
+    modulesDirectories: ['node_modules']
+  },
   output: {
     path: pathPrefix + stringSafetyNet(settings.output, 'dist'),
     filename: 'index_bundle.js'
@@ -59,6 +63,10 @@ module.exports = {
     HTMLWebpackPluginConfig,
     UglifyJsPluginConfig,
     new webpack.optimize.DedupePlugin(),
+    new NpmInstallPlugin({
+      save: true,
+      saveExact: true
+    })
   ],
   devServer: {
     contentBase: pathPrefix + stringSafetyNet(settings.output, 'dist'),
