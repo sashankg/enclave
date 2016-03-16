@@ -1,6 +1,7 @@
 var webpack = require('webpack')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var NpmInstallPlugin = require('npm-install-webpack-plugin')
+var path = require('path')
 var settings = require('../../enclave.js')
 var stringSafetyNet = require('./src/utils/javascriptUtils').stringSafetyNet
 var HotReloader = new webpack.HotModuleReplacementPlugin()
@@ -53,6 +54,9 @@ module.exports = {
   output: {
     path: pathPrefix + stringSafetyNet(settings.output, 'dist'),
     filename: 'index_bundle.js'
+  },
+  resolve: {
+    modulesDirectories: ['node_modules']
   },
   module: {
     loaders: [

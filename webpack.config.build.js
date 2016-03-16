@@ -21,6 +21,9 @@ module.exports = {
   entry: [
     pathPrefix + stringSafetyNet(settings.entry, 'App.js')
   ],
+  resolve: {
+    modulesDirectories: ['node_modules']
+  },
   output: {
     path: pathPrefix + stringSafetyNet(settings.output, 'dist'),
     filename: 'index_bundle.js'
