@@ -40,8 +40,13 @@ module.exports = {
         loader: 'json'
       },
       {
-        test: /\.(otf|eot|ttf|woff|svg|png|jpe?g|txt)/i,
+        test: /\.(otf|eot|ttf|woff|png|jpe?g|txt)/i,
         loader: 'url-loader?limit=8192'
+      },
+      {
+        test: /\.svg$/,
+        exclude: /node_modules/,
+        loader: 'raw-loader'
       },
       {
         test: /\.[s]?css$/,
