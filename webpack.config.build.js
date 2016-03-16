@@ -22,7 +22,7 @@ module.exports = {
     pathPrefix + stringSafetyNet(settings.entry, 'App.js')
   ],
   resolve: {
-    modulesDirectories: ['node_modules']
+    modulesDirectories: ['./node_modules/enclave/node_modules', 'node_modules']
   },
   output: {
     path: pathPrefix + stringSafetyNet(settings.output, 'dist'),
@@ -64,8 +64,7 @@ module.exports = {
     UglifyJsPluginConfig,
     new webpack.optimize.DedupePlugin(),
     new NpmInstallPlugin({
-      save: true,
-      saveExact: true
+      save: true
     })
   ],
   devServer: {

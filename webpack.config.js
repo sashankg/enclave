@@ -56,7 +56,7 @@ module.exports = {
     filename: 'index_bundle.js'
   },
   resolve: {
-    modulesDirectories: ['node_modules']
+    modulesDirectories: ['./node_modules/enclave/node_modules', 'node_modules']
   },
   module: {
     loaders: [
@@ -93,8 +93,7 @@ module.exports = {
     HTMLWebpackPluginConfig,
     HotReloader,
     new NpmInstallPlugin({
-      save: true,
-      saveExact: true
+      save: true
     })
   ],
   devServer: {
