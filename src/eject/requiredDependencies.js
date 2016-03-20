@@ -1,3 +1,8 @@
+/**
+ * A list of dependencies which are installed into enclave, but will be necessary
+ * for a project if enclave is ejected.
+ * @type {string[]}
+ */
 var requiredDependencies = [
   'babel-core',
   'babel-loader',

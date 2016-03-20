@@ -33,7 +33,15 @@ What I would like to do is eventually level enclave to the point where it mainta
 
 All in all, this is open experimentation. Hopefully if you're wanting to get started with React you'll find Enclave is a helpful tool to get you up and running quickly.
 
+## Ok, but what if my app outgrows enclave? Am I stuck with enclave? Do I have to rewrite my app!? What have you done?!
+If you find for whatever reason that enclave's management of your webpack and babel dependencies, merely run:
+```
+$ npm run enclave-eject
+```
 
+The `enclave-eject` command transfers enclave's webpack configuration files to your app's root, and installs the dependencies you need in your app for you.
+
+After executing the eject command, `$ npm start` will compile and serve your code, just like before, sans enclave.
 
 ## Getting Started:
 ### Short Version:
