@@ -2,7 +2,7 @@
 var shell = require('shelljs')
 var prompt = require('prompt')
 var prompts = require('./prompts')
-var spinner = require('../cli-helpers/spinner')
+var spinner = require('../cli-helpers/install-spinner')
 var clientFiles = require('./clientFiles')
 var chalk = require('chalk')
 
@@ -38,12 +38,12 @@ function preventFinishFor(time) {
 var insertScript = {
   flag: '-i',
   insertionPoint: '"scripts": {',
-  addition: '"scripts": {\n    "start": "enclave",\n    "build": "node node_modules/enclave/src/build.js",',
+  addition: '"scripts": {\n    "start": "enclave",\n    "build": "node node_modules/enclave/src/build.js", \n    "enclave-eject": "node node_modules/enclave/src/eject/index.js",',
   file: clientFiles.package
 }
 
 /**
- * This method is really ugly and imperative, I'm sorry.
+ * This method is really ugly and implicit, I'm sorry.
  *
  * It loops through the prompt's result object, and adds each result to a file in the user's root
  * to be referenced later.
