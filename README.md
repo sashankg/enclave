@@ -22,6 +22,17 @@ If you've ever had to make a React app from scratch, you know it can be rough to
 ## Who is this for?
 Primarily for those who don't want to go through the hassle of setting up a React project but who still want to flexibility that a starter kit can't provide.
 
+## Ok, but what if my app outgrows enclave?
+If you find for whatever reason that enclave's management of your webpack and babel dependencies is not offering enough customization for you, merely run:
+```
+$ npm run enclave-eject
+```
+
+The `enclave-eject` command transfers enclave's webpack configuration files to your app's root, and installs the dependencies you need in your app for you.
+
+After executing the eject command, `$ npm start` will compile and serve your code, just like before, sans enclave.
+
+
 ## Philosophy
 This project comes from a combination of two things, a complexity of configuring React applications with Webpack and Babel (especially for beginners), and my experience with compile-to-JavaScript languages, like Elm or CoffeeScript.
 
@@ -32,16 +43,6 @@ Enclave was created with this approach in mind.
 What I would like to do is eventually level enclave to the point where it maintains a sane API but is less reliant on Webpack, maybe even have it do the compiling as well.
 
 All in all, this is open experimentation. Hopefully if you're wanting to get started with React you'll find Enclave is a helpful tool to get you up and running quickly.
-
-## Ok, but what if my app outgrows enclave? Am I stuck with enclave? Do I have to rewrite my app!? What have you done?!
-If you find for whatever reason that enclave's management of your webpack and babel dependencies, merely run:
-```
-$ npm run enclave-eject
-```
-
-The `enclave-eject` command transfers enclave's webpack configuration files to your app's root, and installs the dependencies you need in your app for you.
-
-After executing the eject command, `$ npm start` will compile and serve your code, just like before, sans enclave.
 
 ## Getting Started:
 ### Short Version:
