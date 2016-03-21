@@ -40,8 +40,10 @@ Make sure you do the following before making a PR:
 * Makesure your fork is up to date, it can be tricky trying to make a PR, and then rebase it to master. It's easier to do before you PR.
 * If you made a visual change, provide screenshots in the PR description.
 * If your PR contains anything you think might be hard to grok, explain it with diff comments in github. (After you submit your PR)
+* Keep PRs single purpose focused. Make multiple PRs if you have multiple purposes.
 
 ## Code Conventions
+The linter should pick up most of these:
 * No semicolons
 * Commas dangle `,`
 * 2 spaces for indentation (no tabs)
