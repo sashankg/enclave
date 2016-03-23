@@ -29,19 +29,6 @@ function preventFinishFor(time) {
   }, time)
 }
 
-
-/**
- * An object of strings used for inserting the start script into the user's package.json file with
- * the `shell.sed` command.
- * @type {{flag: string, insertionPoint: string, addition: string, file: string}}
- */
-var insertScript = {
-  flag: '-i',
-  insertionPoint: '"scripts": {',
-  addition: '"scripts": {\n    "start": "enclave",\n    "build": "node node_modules/enclave/src/build.js", \n    "enclave-eject": "node node_modules/enclave/src/eject/index.js",',
-  file: clientFiles.package
-}
-
 /**
  * This method is really ugly and implicit, I'm sorry.
  *
@@ -72,7 +59,6 @@ function configureConfigFile(err, result) {
   console.log(chalk.red('  index: ') + chalk.magenta(result.index))
   console.log(chalk.red('  live: ') + chalk.magenta(result.live))
   console.log(chalk.green('To run your app, just type'), chalk.green.bold('$ npm start'))
-  shell.sed(insertScript.flag, insertScript.insertionPoint, insertScript.addition, insertScript.file)
   preventFinishFor(5000)
 }
 
