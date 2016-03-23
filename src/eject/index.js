@@ -48,8 +48,8 @@ shell.sed(
  */
 var startScript = {
   flag: '-i',
-  searchRegex: '"start": "enclave",',
-  replacement: '"prestart": "webpack",\n    "start": "webpack-dev-server",',
+  searchRegex: '"enclave-serve": "enclave",',
+  replacement: '"prestart": "webpack",\n    "serve": "webpack-dev-server",',
   file: './package.json'
 }
 

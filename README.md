@@ -30,7 +30,7 @@ $ npm run enclave-eject
 
 The `enclave-eject` command transfers enclave's webpack configuration files to your app's root, and installs the dependencies you need in your app for you.
 
-After executing the eject command, `$ npm start` will compile and serve your code, just like before, sans enclave.
+After executing the eject command, `$ npm run serve` will compile and serve your code, just like before, sans enclave.
 
 
 ## Philosophy
@@ -48,7 +48,7 @@ All in all, this is open experimentation. Hopefully if you're wanting to get sta
 ### Short Version:
 ```
 $ npm i enclave -S
-$ npm start
+$ npm run enclave-serve
 ```
 
 ### Long version
@@ -104,7 +104,7 @@ Configure your `index.html` file to have something with the id your react app is
 Enclave will _automagically_ add a script to your `package.json` file which will allow you to run everything.
 To run it, type the following in your terminal:
 ```
-$ npm start
+$ npm run enclave-serve
 ```
 > _If you want to edit your scripts, you can just move the start command somewhere else._
 
