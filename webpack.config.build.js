@@ -1,11 +1,10 @@
 var webpack = require('webpack')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var settings = require('../../enclave.js')
-var stringSafetyNet = require('./src/utils/javascriptUtils').stringSafetyNet
 var pathPrefix = '../../'
 
 var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
-  template: pathPrefix + stringSafetyNet(settings.index, 'index.html'),
+  template: pathPrefix + settings.index,
   filename: 'index.html',
   inject: 'body'
 })
@@ -18,10 +17,10 @@ var UglifyJsPluginConfig = new webpack.optimize.UglifyJsPlugin({
 
 module.exports = {
   entry: [
-    pathPrefix + stringSafetyNet(settings.entry, 'App.js')
+    pathPrefix + settings.entry
   ],
   output: {
-    path: pathPrefix + stringSafetyNet(settings.output, 'dist'),
+    path: pathPrefix + settings.output,
     filename: 'index_bundle.js'
   },
   module: {
@@ -32,7 +31,7 @@ module.exports = {
         loader: 'babel-loader',
         query: {
           presets: [
-            'es2015', 
+            'es2015',
             'stage-0',
             'react'
           ]
@@ -65,7 +64,7 @@ module.exports = {
     new webpack.optimize.DedupePlugin(),
   ],
   devServer: {
-    contentBase: pathPrefix + stringSafetyNet(settings.output, 'dist'),
+    contentBase: pathPrefix + settings.output,
     hot: true,
   }
 }
