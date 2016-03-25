@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 var shell = require('shelljs')
 var prompt = require('prompt')
+var chalk = require('chalk')
+
 var prompts = require('./prompts')
 var spinner = require('../cli-helpers/install-spinner')
 var clientFiles = require('./clientFiles')
-var chalk = require('chalk')
 
 /**
  * Handle errors from the cli prompts.
