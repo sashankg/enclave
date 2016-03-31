@@ -142,6 +142,8 @@ Ridding ourselves of issues also tightens our community. No more side-line issue
 
 [See the Contributing Guide](./CONTRIBUTING.md)
 
+[Learn how Enclave works](./WALKTHROUGH.md)
+
 ## License
 
 [MIT](./LICENSE.md)
