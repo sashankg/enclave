@@ -12,36 +12,36 @@ var prompts = [
     default: 'App.js',
     type: 'string',
     required: false,
-    name: 'entry'
-  },
-  {
-    description: chalk.green('Is there a specific name you want me to send your code after I compile it, if so what is it?'),
-    default: 'dist',
-    type: 'string',
-    required: false,
-    name: 'output'
-  },
-  {
-    description: chalk.blue('What port would you like this all to run on?'),
-    default: '8080',
-    type: 'number',
-    required: false,
-    name: 'port'
+    name: 'entry',
   },
   {
     description: chalk.cyan('Where does (or will) your index.html file live?'),
     default: 'index.html',
     type: 'string',
     required: false,
-    name: 'index'
+    name: 'index',
   },
   {
-    description: chalk.magenta('Would you like me to turn live reload on in your app? true/false'),
-    message: chalk.red('Please enter a boolean, true or false'),
-    type: 'boolean',
-    required: true,
-    name: 'live'
-  }
+    description: chalk.green('Is there a specific name you want me to send your code after I compile it, if so what is it?'),
+    default: 'dist',
+    type: 'string',
+    required: false,
+    name: 'output',
+  },
+  {
+    description: chalk.blue('What port would you like this all to run on?'),
+    default: '8080',
+    type: 'number',
+    required: false,
+    name: 'port',
+  },
+  {
+    description: chalk.red('Would you like me to install React for you?'),
+    default: 'no',
+    type: 'string',
+    required: false,
+    name: 'autoInstall',
+  },
 ]
 
 module.exports = prompts

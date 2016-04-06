@@ -8,6 +8,8 @@ var shell = require('shelljs')
  */
 var userSettings = require('../../../enclave.js')
 
+userSettings.autoInstall && shell.exec('npm i -S react react-dom')
+
 /**
  * Runs the actual webpack build. Would really like to eventually do something about webpack's output.
  * It's big and messy, it would be nice to have enclave mask it.
