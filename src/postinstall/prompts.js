@@ -37,8 +37,8 @@ var prompts = [
   },
   {
     description: chalk.red('Would you like me to install React for you?'),
-    default: 'no',
-    type: 'string',
+    default: false,
+    type: 'boolean',
     required: false,
     name: 'autoInstall',
   },
