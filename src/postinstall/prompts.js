@@ -42,6 +42,13 @@ var prompts = [
     required: false,
     name: 'autoInstall',
   },
+  {
+    description: chalk.magenta('Would you like me to turn live reload on in your app? true/false'),
+    default: true,
+    type: 'boolean',
+    required: false,
+    name: 'live'
+  }
 ]
 
 module.exports = prompts

@@ -71,6 +71,7 @@ function configureConfigFile(err, result) {
   console.log(chalk.red('  output: ') + chalk.magenta(result.output))
   console.log(!result.port ? chalk.red('  port: 8080') : chalk.red('  port: ') + chalk.magenta(result.port))
   console.log(chalk.red('  index: ') + chalk.magenta(result.index))
+  console.log(chalk.red('  autoInstall: ') + chalk.magenta(result.autoInstall))
   console.log(chalk.red('  live: ') + chalk.magenta(result.live))
   console.log(chalk.green('To run your app, just type'), chalk.green.bold('$ npm run enclave-serve'))
   shell.sed(insertScript.flag, insertScript.insertionPoint, insertScript.addition, insertScript.file)
