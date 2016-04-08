@@ -1,6 +1,6 @@
 {
   "name": "enclave",
-  "version": "0.9.3",
+  "version": "0.10.0",
   "description": "An API for compiling React applications with Webpack",
   "main": "index.js",
   "repository": {
@@ -51,6 +51,6 @@
   "devDependencies": {
     "eslint": "^2.3.0",
     "eslint-config-standard-jsx": "^1.1.1",
-    "eslint-plugin-react": "^4.2.1"    
+    "eslint-plugin-react": "^4.2.1"
   }
 }
