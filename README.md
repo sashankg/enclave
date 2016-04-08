@@ -1,9 +1,3 @@
-[![npm version](https://img.shields.io/npm/v/enclave.svg?style=flat-square)](https://www.npmjs.org/package/enclave)
-[![Slack Status](http://enclave-cli.herokuapp.com/badge.svg)](https://enclave-cli.herokuapp.com/)
-[![npm downloads](https://img.shields.io/npm/dm/enclave.svg?style=flat-square)](http://npm-stat.com/charts.html?package=enclave&from=2016-03-01)
-[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](./LICENSE.md)
-[![Build Status](https://travis-ci.org/eanplatter/enclave.svg?branch=master)](https://travis-ci.org/eanplatter/enclave)
-
 <p align="center">
   <img alt="enclave" src="http://i1264.photobucket.com/albums/jj488/eanplatter1/enclave-logo_zpslmhskufg.png" width="546">
 </p>
@@ -11,7 +5,23 @@
 <p align="center">
   A simpler way to compile React applications.
 </p>
-
+<p align="center">
+  <a href='https://www.npmjs.org/package/enclave'>
+    <img src="https://img.shields.io/npm/v/enclave.svg?style=flat-square" />
+  </a>
+  <a href='https://enclave-cli.herokuapp.com/'>
+    <img src="http://enclave-cli.herokuapp.com/badge.svg" />
+  </a>
+  <a href='http://npm-stat.com/charts.html?package=enclave&from=2016-03-01'>
+    <img src="https://img.shields.io/npm/dm/enclave.svg?style=flat-square" />
+  </a>
+  <a href='./LICENSE.md'>
+    <img src="http://img.shields.io/:license-mit-blue.svg?style=flat-square" />
+  </a>
+  <a href='https://travis-ci.org/eanplatter/enclave'>
+    <img src="https://travis-ci.org/eanplatter/enclave.svg?branch=master" />
+  </a>
+</p>
 
 ## What is this?
 An npm module which handles compiling your JSX and ES2015 code into browser-ready JavaScript.
