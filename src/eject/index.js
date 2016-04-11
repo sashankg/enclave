@@ -49,7 +49,7 @@ shell.sed(
 var startScript = {
   flag: '-i',
   searchRegex: '"enclave-serve": "enclave",',
-  replacement: '"prestart": "webpack",\n    "serve": "webpack-dev-server",',
+  replacement: '"prestart": "webpack",\n    "start": "webpack-dev-server",',
   file: './package.json'
 }
 
