@@ -13,6 +13,9 @@
     "lint": "eslint *.js src/**/*.js example/**/*.{js,jsx}",
     "install-deps": "npm install --ignore-scripts",
     "example": "webpack-dev-server",
+    "release:patch":"npm version patch && npm publish && git push --follow-tags",
+    "release:minor":"npm version minor && npm publish && git push --follow-tags",
+    "release:major":"npm version major && npm publish && git push --follow-tags",
     "test": "npm run lint"
   },
   "pre-commit": [
