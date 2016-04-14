@@ -60,7 +60,7 @@ module.exports = {
         loader: 'babel-loader',
         query: {
           presets: [
-            'es2015', 
+            'es2015',
             'stage-0',
             'react'
           ]
@@ -91,6 +91,7 @@ module.exports = {
     HTMLWebpackPluginConfig,
     HotReloader,
   ],
+  devtool: 'cheap-module-eval-source-map',
   devServer: {
     contentBase: pathPrefix + settings.output,
     hot: true,
