@@ -63,6 +63,7 @@ module.exports = {
     UglifyJsPluginConfig,
     new webpack.optimize.DedupePlugin(),
   ],
+  devtool: 'cheap-module-eval-source-map',
   devServer: {
     contentBase: pathPrefix + settings.output,
     hot: true,
