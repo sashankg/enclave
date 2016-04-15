@@ -141,13 +141,6 @@ exports.index = "src/index.html"
 exports.live = true
 ```
 
-## Issues
-In the spirit of making enclave more accessible to developers who are new to open source, we decided that we would turn off the issue feature on GitHub. In place of issues, we are inviting anyone with a bug / feature idea / api change or whatever else to create a pull request that exposes the bug or shows how you might add a feature.
-
-Honestly, we'd rather see a poorly written PR than an issue. Take a shot in the dark if you must! Features, bugs and api changes are easier to discuss around a pull request than an issue.
-
-Ridding ourselves of issues also tightens our community. No more side-line issue makers and small team of PR doers. For more information about making a PR see the [contributing](./CONTRIBUTING.md) guide.
-
 ## Contributing
 
 [See the Contributing Guide](./CONTRIBUTING.md)
