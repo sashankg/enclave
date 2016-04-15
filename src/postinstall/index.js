@@ -2,6 +2,7 @@
 var shell = require('shelljs')
 var prompt = require('prompt')
 var chalk = require('chalk')
+var fs = require('fs')
 
 var prompts = require('./prompts')
 var spinner = require('../cli-helpers/install-spinner')
@@ -77,24 +78,28 @@ function configureConfigFile(err, result) {
   shell.sed(insertScript.flag, insertScript.insertionPoint, insertScript.addition, insertScript.file)
   preventFinishFor(5000)
 }
+// Runs only if enclave.js file doesn't exist
+fs.access(clientFiles.config, fs.F_OK, function (err) {
+  if (err) {
+    /**
+    * Start the CLI prompt.
+    */
+    prompt.start()
 
-/**
- * Start the CLI prompt.
- */
-prompt.start()
+    /**
+    * Throw down that postinstall logo.
+    */
+    shell.exec('bash ./src/cli-helpers/postinstall-logo')
 
-/**
- * Throw down that postinstall logo.
- */
-shell.exec('bash ./src/cli-helpers/postinstall-logo')
+    /**
+    * Clean out any currently existing config file for a fresh one.
+    */
+    shell.exec('rm ' + clientFiles.config)
+    shell.exec('touch ' + clientFiles.config)
 
-/**
- * Clean out any currently existing config file for a fresh one.
- */
-shell.exec('rm ' + clientFiles.config)
-shell.exec('touch ' + clientFiles.config)
-
-/**
- * Actually executing all of this magic.
- */
-prompt.get(prompts, configureConfigFile)
+    /**
+    * Actually executing all of this magic.
+    */
+    prompt.get(prompts, configureConfigFile)
+  }
+})
