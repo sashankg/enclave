@@ -94,6 +94,7 @@ module.exports = {
   devtool: 'cheap-module-eval-source-map',
   devServer: {
     contentBase: pathPrefix + settings.output,
+    historyApiFallback: true,
     hot: true,
   }
 }
