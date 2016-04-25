@@ -16,8 +16,6 @@ var requiredDependencies = [
   'json-loader',
   'node-sass',
   'raw-loader',
-  'react',
-  'react-dom',
   'react-hot-loader',
   'sass-loader',
   'style-loader',
