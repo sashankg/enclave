@@ -49,6 +49,7 @@ var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
 module.exports = {
   entry: entryArr,
   output: {
+    publicPath: '/',
     path: pathPrefix + settings.output,
     filename: 'index_bundle.js'
   },
@@ -94,7 +95,9 @@ module.exports = {
   devtool: 'cheap-module-eval-source-map',
   devServer: {
     contentBase: pathPrefix + settings.output,
-    historyApiFallback: true,
+    historyApiFallback: {
+      index: '/',
+    },
     hot: true,
   }
 }
