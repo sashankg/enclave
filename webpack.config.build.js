@@ -62,6 +62,9 @@ module.exports = {
     HTMLWebpackPluginConfig,
     UglifyJsPluginConfig,
     new webpack.optimize.DedupePlugin(),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV) || '"production"',
+    }),
   ],
   devServer: {
     contentBase: pathPrefix + settings.output,
