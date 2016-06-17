@@ -69,5 +69,8 @@ module.exports = {
   devServer: {
     contentBase: pathPrefix + settings.output,
     hot: true,
+  },
+  resolve: {
+    extensions: ['', '.js', '.jsx']
   }
 }

@@ -99,5 +99,8 @@ module.exports = {
       index: '/',
     },
     hot: true,
+  },
+  resolve: {
+    extensions: ['', '.js', '.jsx']
   }
 }
