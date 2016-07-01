@@ -36,8 +36,8 @@ var prompts = [
     name: 'port',
   },
   {
-    description: chalk.red('Would you like me to install React for you?'),
-    default: false,
+    description: chalk.red('Would you like me to install React for you? true/false'),
+    default: true,
     type: 'boolean',
     required: false,
     name: 'autoInstall',
