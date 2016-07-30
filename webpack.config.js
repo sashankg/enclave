@@ -54,6 +54,9 @@ module.exports = {
     filename: 'index_bundle.js'
   },
   module: {
+    preLoaders: [
+      { test: /\.json$/, loader: 'json'},
+    ],
     loaders: [
       {
         test: /\.js[x]?$/,
@@ -101,6 +104,6 @@ module.exports = {
     hot: true,
   },
   resolve: {
-    extensions: ['', '.js', '.jsx']
+      extensions: ['', '.js', '.jsx', '.json']
   }
 }
