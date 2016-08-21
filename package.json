@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/eanplatter/enclave.git"
+    "url": "https://github.com/sashankg/enclave.git"
   },
   "scripts": {
     "postinstall": "node src/postinstall/index.js",
@@ -21,11 +21,12 @@
   "bin": {
     "enclave": "src/index.js"
   },
-  "author": "Ean Platter <eanplatter@gmail.com> (eanplatter.github.io)",
+  "author": "Ean Platter <eanplatter@gmail.com> (eanplatter.github.io) / modified by Sashank Gogula",
   "license": "MIT",
   "dependencies": {
     "babel-core": "^6.7.2",
     "babel-loader": "^6.2.4",
+    "babel-polyfill": "^6.13.0",
     "babel-preset-es2015": "^6.6.0",
     "babel-preset-react": "^6.5.0",
     "babel-preset-stage-0": "^6.5.0",
