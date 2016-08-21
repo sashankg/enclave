@@ -33,6 +33,7 @@ if (JSON.parse(settings.live)) {
 }
 
 var entryArr = [
+  'babel-polyfill',
   liveReloadPort,
   liveReloadServer,
   pathPrefix + settings.entry

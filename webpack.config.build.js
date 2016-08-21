@@ -17,6 +17,7 @@ var UglifyJsPluginConfig = new webpack.optimize.UglifyJsPlugin({
 
 module.exports = {
   entry: [
+    'babel-polyfill',
     pathPrefix + settings.entry
   ],
   output: {
